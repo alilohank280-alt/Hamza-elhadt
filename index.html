@@ -333,7 +333,7 @@
             margin: 20px 0;
         }
         
-        /* Footer Links */
+        /* Footer Links - UPDATED WITH APP LINK ON TOP */
         .footer-links {
             background: rgba(0,0,0,0.3);
             padding: 40px 0;
@@ -383,6 +383,46 @@
         .link-card h3 {
             margin-bottom: 10px;
             color: var(--accent-color);
+        }
+        
+        /* Special Style for App Link */
+        .app-link {
+            border: 2px solid #ff6b6b !important;
+            background: linear-gradient(135deg, rgba(15, 12, 41, 0.9), rgba(255, 107, 107, 0.1)) !important;
+            position: relative;
+        }
+        
+        .app-link::before {
+            content: "⭐ مميز";
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: #ff6b6b;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+        
+        .app-link .link-icon {
+            color: #ff6b6b;
+        }
+        
+        .app-link h3 {
+            color: #ff6b6b;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #ff6b6b;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-decoration: none;
         }
         
         /* Footer */
@@ -557,7 +597,8 @@
                 <!-- News will be loaded here -->
                 <div class="loading">
                     <div class="spinner"></div>
-                    <p>جارٍ تحميل الأخبار...</p>
+                        <p>جارٍ تحميل الأخبار...</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -572,34 +613,46 @@
         </section>
     </main>
 
-    <!-- Footer Links -->
+    <!-- Footer Links - UPDATED WITH APP LINK ON TOP -->
     <section class="footer-links">
         <div class="container">
             <div class="links-container">
-                <h2 class="links-title"><i class="fas fa-link"></i> مواقع مقترحة</h2>
+                <h2 class="links-title"><i class="fas fa-download"></i> تطبيقات ومواقع مقترحة</h2>
                 <div class="links-grid">
-                    <!-- 1. موقع JIJEL NEWS الإخباري -->
+                    
+                    <!-- 1. تطبيق حمزة من قلب الحدث (الأول والأهم) -->
+                    <a href="https://1drv.ms/u/c/577220FEF38F8D42/IQBb3tRQjs90TrXCFexqq20fAbv_nV-bbMu7gaiWORnp9Jk" 
+                       class="link-card app-link" 
+                       target="_blank" 
+                       rel="noopener">
+                        <div class="link-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>تطبيق حمزة من قلب الحدث</h3>
+                        <p>التطبيق الرسمي للبث المباشر للأخبار<br>حمل الآن لمتابعة القنوات الإخبارية على هاتفك</p>
+                        <span class="download-btn">⬇️ حمل التطبيق الآن</span>
+                    </a>
+                    
+                    <!-- 2. موقع JIJEL NEWS الإخباري -->
                     <a href="https://africano180.netlify.app" class="link-card" target="_blank" rel="noopener">
                         <div class="link-icon"><i class="fas fa-newspaper"></i></div>
                         <h3>JIJEL NEWS</h3>
                         <p>موقع إخباري جزائري متخصص في أخبار جيجل والمنطقة</p>
                     </a>
                     
-                    <!-- 2. تطبيق المنشاوي -->
+                    <!-- 3. تطبيق المنشاوي -->
                     <a href="https://africano18.netlify.app" class="link-card" target="_blank" rel="noopener">
                         <div class="link-icon"><i class="fas fa-quran"></i></div>
                         <h3>تطبيق المنشاوي</h3>
                         <p>تحميل تطبيق القرآن الكريم بصوت الشيخ محمد صديق المنشاوي</p>
                     </a>
                     
-                    <!-- 3. موقع للأسرة والرعاية الصحية -->
+                    <!-- 4. موقع للأسرة والرعاية الصحية -->
                     <a href="https://omouma18.netlify.app" class="link-card" target="_blank" rel="noopener">
                         <div class="link-icon"><i class="fas fa-heart"></i></div>
                         <h3>صحة الأسرة</h3>
                         <p>موقع متخصص في الرعاية الصحية والعائلية</p>
                     </a>
                     
-                    <!-- 4. موقع صحي وطبي -->
+                    <!-- 5. موقع صحي وطبي -->
                     <a href="https://adorable-squirrel-75d0bc.netlify.app" class="link-card" target="_blank" rel="noopener">
                         <div class="link-icon"><i class="fas fa-user-md"></i></div>
                         <h3>العيادة الذكية</h3>
@@ -979,66 +1032,6 @@
                 }
             }
         }
-
-        // --- SEO Optimization ---
-        // إضافة بيانات منظمة
-        const structuredData = {
-            "@context": "https://schema.org",
-            "@type": "NewsMediaOrganization",
-            "name": "حمزة من قلب الحدث",
-            "url": window.location.href,
-            "logo": "https://cdn-icons-png.flaticon.com/512/1006/1006771.png",
-            "description": "موقع إخباري عربي يقدم بث مباشر لأهم القنوات الإخبارية العربية والعالمية",
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "email": "contact@hamza-news.com"
-            }
-        };
-
-        const script = document.createElement('script');
-        script.type = 'application/ld+json';
-        script.text = JSON.stringify(structuredData);
-        document.head.appendChild(script);
-
-        // تحسين الأداء للـ Netlify
-        window.addEventListener('load', () => {
-            // Lazy loading للصور
-            const images = document.querySelectorAll('img[data-src]');
-            const imageObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
-            
-            images.forEach(img => imageObserver.observe(img));
-            
-            // Service Worker للتخزين المؤقت (اختياري لـ Netlify)
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('/sw.js').catch(err => {
-                    console.log('Service Worker registration failed:', err);
-                });
-            }
-        });
-
-        // --- تحسينات إضافية لـ Netlify ---
-        // Preconnect للروابط الخارجية
-        const preconnectLinks = [
-            'https://pagead2.googlesyndication.com',
-            'https://pl28601150.effectivegatecpm.com',
-            'https://pl28601191.effectivegatecpm.com',
-            'https://cdnjs.cloudflare.com'
-        ];
-        
-        preconnectLinks.forEach(link => {
-            const linkEl = document.createElement('link');
-            linkEl.rel = 'preconnect';
-            linkEl.href = link;
-            document.head.appendChild(linkEl);
-        });
     </script>
 </body>
 </html>
