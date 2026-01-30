@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>حمزة من قلب الحدث</name>
+    <Placemark>
+      <name>Elhadth Hamza 24</name>
+      <description>الموقع الرسمي - حمزة من قلب الحدث</description>
+      <Point>
+        <coordinates>3.0588,36.7538,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
