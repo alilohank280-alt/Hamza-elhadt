@@ -6,7 +6,7 @@
     
     <!-- SEO Meta Tags -->
     <title>حمزة من قلب الحدث | بث مباشر للأخبار العربية 24/7</title>
-    <meta name="description" content="موقع حمزة من قلب الحدث - البث المباشر للقنوات الإخبارية العربية، تابع آخر الأخبار العاجلة والتغطيات الحصرية من قلب الأحداث">
+    <meta name="description" content="حمل تطبيق حمزة من قلب الحدث - تطبيق مشاهدة القنوات الإخبارية المباشرة وتابع آخر الأخبار العاجلة 24/7">
     <meta name="keywords" content="أخبار عربية, بث مباشر, قنوات إخبارية, الجزيرة, العربية, أخبار عاجلة, حمزة من قلب الحدث">
     <meta name="author" content="موقع حمزة من قلب الحدث">
     
@@ -97,11 +97,12 @@
         }
         
         .site-title h1 {
-            font-size: 1.8rem;
+            font-size: 1.5rem; /* تصغير الخط قليلاً ليتناسب مع الجملة الطويلة */
             background: linear-gradient(45deg, var(--accent-color), #ff6b6b);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 5px;
+            line-height: 1.3;
         }
         
         .site-title p {
@@ -201,6 +202,8 @@
             border: 1px solid var(--border-color);
             backdrop-filter: blur(10px);
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
         
         .sidebar-header {
@@ -211,7 +214,7 @@
         }
         
         .channels-list {
-            max-height: 600px;
+            max-height: 400px;
             overflow-y: auto;
             padding: 10px;
         }
@@ -315,25 +318,7 @@
             opacity: 0.7;
         }
         
-        /* Ads Section */
-        .ads-section {
-            margin: 30px 0;
-            text-align: center;
-            padding: 20px;
-            background: rgba(0,0,0,0.2);
-            border-radius: 10px;
-            border: 1px dashed var(--border-color);
-        }
-        
-        .ad-container {
-            min-height: 90px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 20px 0;
-        }
-        
-        /* Footer Links - UPDATED WITH APP LINK ON TOP */
+        /* Footer Links */
         .footer-links {
             background: rgba(0,0,0,0.3);
             padding: 40px 0;
@@ -452,6 +437,10 @@
                 justify-content: center;
             }
             
+            .site-title h1 {
+                font-size: 1.2rem; /* تصغير أكثر للموبايل */
+            }
+
             .main-layout {
                 grid-template-columns: 1fr;
             }
@@ -513,8 +502,9 @@
                         <img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png" alt="شعار حمزة من قلب الحدث">
                     </div>
                     <div class="site-title">
-                        <h1>حمزة من قلب الحدث</h1>
-                        <p>بث مباشر للأخبار العربية 24/7</p>
+                        <!-- تم تعديل العنوان H1 هنا -->
+                        <h1>بث مباشر للأخبار العربية - حمزة من قلب الحدث</h1>
+                        <p>تابعنا على مدار الساعة 24/7</p>
                     </div>
                 </div>
                 
@@ -533,28 +523,6 @@
 
     <!-- Main Content -->
     <main class="container">
-        <!-- Ads Section 1 -->
-        <section class="ads-section">
-            <h3><i class="fas fa-ad"></i> إعلانات</h3>
-            <div class="ad-container">
-                <!-- AdSense -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- HamzaNews_Header -->
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-XXXXXXXXXXXXXX"
-                     data-ad-slot="1234567890"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-                
-                <!-- External Ad 1 -->
-                <script src="https://pl28601150.effectivegatecpm.com/d2/97/98/d29798f8707757a8fdb26bb0ecee8760.js"></script>
-            </div>
-        </section>
-
         <!-- Main Player and Channels -->
         <div class="main-layout">
             <!-- Video Player -->
@@ -581,6 +549,22 @@
                         <p>جارٍ تحميل القنوات...</p>
                     </div>
                 </div>
+
+                <!-- AD 160x600 (الكود الثالث) -->
+                <div style="text-align: center; margin-top: 20px; padding: 10px; background: rgba(0,0,0,0.2);">
+                    <script>
+                      atOptions = {
+                        'key' : '7a94c638f04556bb9b8500f501a78520',
+                        'format' : 'iframe',
+                        'height' : 600,
+                        'width' : 160,
+                        'params' : {}
+                      };
+                    </script>
+                    <script src="https://www.highperformanceformat.com/7a94c638f04556bb9b8500f501a78520/invoke.js"></script>
+                </div>
+                <!-- END AD 160x600 -->
+
             </aside>
         </div>
 
@@ -602,18 +586,9 @@
                 </div>
             </div>
         </section>
-
-        <!-- Ads Section 2 -->
-        <section class="ads-section">
-            <div class="ad-container">
-                <!-- External Ad 2 -->
-                <script async="async" data-cfasync="false" src="https://pl28601191.effectivegatecpm.com/b21dc8d8d09eaf46e6aad6fc747e62cb/invoke.js"></script>
-                <div id="container-b21dc8d8d09eaf46e6aad6fc747e62cb"></div>
-            </div>
-        </section>
     </main>
 
-    <!-- Footer Links - UPDATED WITH APP LINK ON TOP -->
+    <!-- Footer Links -->
     <section class="footer-links">
         <div class="container">
             <div class="links-container">
@@ -677,7 +652,11 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- الكودان الأول والثاني (سكريبتات عامة) -->
+    <script src="https://pl28817792.effectivegatecpm.com/fb/41/27/fb4127ded73d76a1b79ec049f350b361.js"></script>
+    <script src="https://pl28817703.effectivegatecpm.com/54/60/2c/54602ce40f0ee7c9bc041d502f095b2d.js"></script>
+
+    <!-- JavaScript for Site Functionality -->
     <script>
         // --- البيانات والتكوين ---
         const CHANNELS = [
@@ -1034,4 +1013,4 @@
         }
     </script>
 </body>
-</html>
+    </html>
